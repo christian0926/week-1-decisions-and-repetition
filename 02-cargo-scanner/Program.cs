@@ -1,7 +1,7 @@
-int cargoWeight = 800;
-int maxWeight = 800;
+int cargoWeight = 810;
+int maxWeight = 801;
 int containerCount = 4;
-int expectedContainers = 5;
+int expectedContainers = 4;
 
 // TODO: Erstatt false med riktige sammenligningsuttrykk.
 bool isOverweight = false;
