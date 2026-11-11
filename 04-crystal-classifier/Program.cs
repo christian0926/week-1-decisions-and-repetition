@@ -2,38 +2,41 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        int energy = -4;
+        int energy = 33;
         bool onof = false;
         string classification = "";
 
         // TODO: Sett classification med if / else if / else.
         if (energy == 0)
         {
-            classification = "off";
+            Console.WriteLine("off");
         }
         else if (energy < 0)
         {
-            classification = "?";
+            Console.WriteLine("?");
         }
         else if (energy > 0)
         {
-            classification = "on";
+            Console.WriteLine("on");
         }
-        answer(classification, onof);
         if (energy > 0){onof = true;}
         if (onof)
             {
-            if (energy >= 40 && energy <= 70)
+            if (energy < 20)
             {
-                classification = "optimal";
+                classification = "dormant";
             }
-            else if (energy > 70)
+            if (energy >= 20 && energy < 50)
             {
-                classification = "too high";
+                classification = "stabil";
             }
-            else if (energy < 40)
+            if (energy >= 50 && energy < 80)
             {
-                classification = "too low";
+                classification = "unstable";
+            }
+            else if (energy > 80)
+            {
+                classification = "critical";
             }
             answer(classification, onof);
         }
@@ -41,11 +44,11 @@ internal class Program
         {
             if (onof)
             {
-                Console.WriteLine(classification);
+                Console.WriteLine ($"Classification: {classification}");
             }
             else
             {
-                Console.WriteLine($"Classification: {classification}");
+                Console.WriteLine(classification);
             }
         }
     }
