@@ -3,6 +3,6 @@ string shipName = "Halcyon";
 string sector = "K-19";
 
 // TODO: Lag badge med string interpolation.
-string badge = $"{pilotName} ship {shipName} sector {sector}";
+string badge = $"PILOT: {pilotName} | SHIP: {shipName} | SECTOR: {sector}";
 
 Console.WriteLine(badge);
