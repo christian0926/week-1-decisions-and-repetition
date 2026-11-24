@@ -1,5 +1,5 @@
 string dockingCode = "north";
-string instruction = "Unknown docking code";
+string instruction = "";
 dockingCode = dockingCode.ToUpper();
 
 // TODO: Bruk switch statement til å sette instruction.
@@ -15,6 +15,9 @@ switch (dockingCode) {
         break;
     case "CLOSED":
         instruction = "hold position";
+        break;
+    default:
+        instruction = "Unknown docking code";
         break;
 }
 Console.WriteLine(instruction);
