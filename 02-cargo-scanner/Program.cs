@@ -4,26 +4,10 @@ int containerCount = 4;
 int expectedContainers = 4;
 
 // TODO: Erstatt false med riktige sammenligningsuttrykk.
-bool isOverweight = false;
-bool isExactlyAtLimit = false;
-bool hasContainers = false;
-bool countDiffersFromExpected = false;
-if (cargoWeight > maxWeight)
-{
-    isOverweight = true;
-}
-if (cargoWeight == maxWeight)
-{
-    isExactlyAtLimit = true;
-}
-if (containerCount > 0)
-{
-    hasContainers = true;
-}
-if (expectedContainers == containerCount)
-{
-    countDiffersFromExpected = true;
-}
+bool isOverweight = cargoWeight > maxWeight;
+bool isExactlyAtLimit = cargoWeight == maxWeight;
+bool hasContainers = containerCount > 0;
+bool countDiffersFromExpected = expectedContainers == containerCount;
 Console.WriteLine($"Overweight: {isOverweight}");
 Console.WriteLine($"Exactly at limit: {isExactlyAtLimit}");
 Console.WriteLine($"Has containers: {hasContainers}");
