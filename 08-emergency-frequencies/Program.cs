@@ -1,24 +1,31 @@
-string signal = "CRIMSON";
+string signal = "green";
 signal = signal.ToUpper();
+void c(string signal)
+{
+    Console.WriteLine(signal);
+}
 // TODO: Lag switch med kombinerte case-labels.
 switch (signal)
 {
     case "CRIMSON":
-        Console.WriteLine("Evacuate deck");
+        c("Evacuate deck");
         break;
     case "RED":
-        Console.WriteLine("Evacuate deck");
+        c("Evacuate deck");
         break;
     case "SCARLET":
-        Console.WriteLine("Evacuate deck");
+        c("Evacuate deck");
         break;
     case "AMBER":
-        Console.WriteLine("Prepare crew");
+        c("Prepare crew");
         break;
     case "YELLOW":
-        Console.WriteLine("Prepare crew");
+        c("Prepare crew");
         break;
-        case "GREEN":
-        Console.WriteLine("No emergency");
+    case "GREEN":
+        c("No emergency");
+        break;
+    default:
+        c("Unknown signal");
         break;
 }
