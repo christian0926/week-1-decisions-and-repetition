@@ -15,22 +15,19 @@ internal class Program
         {
             Console.WriteLine("?");
         }
-        else if (energy > 0)
+        else
         {
             Console.WriteLine("on");
-        }
-        if (energy > 0){onof = true;}
-        if (onof)
-            {
+            onof = true;
             if (energy < 20)
             {
                 classification = "dormant";
             }
-            if (energy >= 20 && energy < 50)
+            else if (energy >= 20 && energy < 50)
             {
                 classification = "stabil";
             }
-            if (energy >= 50 && energy < 80)
+            else if (energy >= 50 && energy < 80)
             {
                 classification = "unstable";
             }
@@ -39,7 +36,7 @@ internal class Program
                 classification = "critical";
             }
             answer(classification, onof);
-        }
+         }
         static void answer(string classification, bool onof)
         {
             if (onof)
