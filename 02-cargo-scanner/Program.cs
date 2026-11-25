@@ -11,4 +11,4 @@ bool countDiffersFromExpected = expectedContainers == containerCount;
 Console.WriteLine($"Overweight: {isOverweight}");
 Console.WriteLine($"Exactly at limit: {isExactlyAtLimit}");
 Console.WriteLine($"Has containers: {hasContainers}");
-Console.WriteLine($"Unexpected count: {countDiffersFromExpected}");
+Console.WriteLine($"Unexpected count: {!countDiffersFromExpected}");
