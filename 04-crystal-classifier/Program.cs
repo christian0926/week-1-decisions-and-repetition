@@ -2,8 +2,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        int energy = 33;
-        bool onof = false;
+        int energy = 80;
         string classification = "";
 
         // TODO: Sett classification med if / else if / else.
@@ -13,12 +12,11 @@ internal class Program
         }
         else if (energy < 0)
         {
-            Console.WriteLine("?");
+            Console.WriteLine("error");
         }
         else
         {
             Console.WriteLine("on");
-            onof = true;
             if (energy < 20)
             {
                 classification = "dormant";
@@ -31,22 +29,15 @@ internal class Program
             {
                 classification = "unstable";
             }
-            else if (energy > 80)
+            else if (energy >= 80)
             {
                 classification = "critical";
             }
-            answer(classification, onof);
+            answer(classification);
          }
-        static void answer(string classification, bool onof)
+        static void answer(string classification)
         {
-            if (onof)
-            {
-                Console.WriteLine ($"Classification: {classification}");
-            }
-            else
-            {
-                Console.WriteLine(classification);
-            }
+        Console.WriteLine ($"Classification: {classification}");
         }
     }
 }
